@@ -89,10 +89,10 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
-    device/htc/bravo-common/bcm4329.ko:system/lib/modules/bcm4329.ko
+    device/htc/bravo/bcm4329.ko:system/lib/modules/bcm4329.ko
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/bravo-common/kernel
+LOCAL_KERNEL := device/htc/bravo/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
