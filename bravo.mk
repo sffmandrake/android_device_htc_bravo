@@ -25,6 +25,11 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/init.bravo.rc:root/init.bravo.rc \
     device/htc/bravo/ueventd.bravo.rc:root/ueventd.bravo.rc
 
+ifeq (oxygen_bravo,$(TARGET_PRODUCT))
+PRODUCT_COPY_FILES += \
+    device/htc/bravo/init.rc:root/init.rc
+endif
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libhtc_ril.so \
