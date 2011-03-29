@@ -105,9 +105,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-# Save space by removing fallback font
-NO_FALLBACK_FONT := true
-
 $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
 
 # stuff common to all HTC phones
