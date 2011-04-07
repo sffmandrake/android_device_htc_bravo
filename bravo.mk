@@ -105,6 +105,10 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+ifeq (devnull_bravo,$(TARGET_PRODUCT))
+    WITH_DEXPREOPT=true
+endif
+
 $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
 
 # stuff common to all HTC phones
