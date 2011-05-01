@@ -25,13 +25,20 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/init.bravo.rc:root/init.bravo.rc \
     device/htc/bravo/ueventd.bravo.rc:root/ueventd.bravo.rc
 
-ifeq (oxygen_bravo,$(TARGET_PRODUCT))
+ifneq (devnull_bravo,$(TARGET_PRODUCT))
 PRODUCT_COPY_FILES += \
     device/htc/bravo/init.rc:root/init.rc
 endif
 
+ifeq (dehydration_bravo,$(TARGET_PRODUCT))
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=240 \
+    ro.sf.lcd_density=200
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=240
+endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
@@ -107,7 +114,9 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-ifeq (devnull_bravo,$(TARGET_PRODUCT))
+ifeq (oxygen_bravo,$(TARGET_PRODUCT))
+    WITH_DEXPREOPT=false
+else
     WITH_DEXPREOPT=true
 endif
 
