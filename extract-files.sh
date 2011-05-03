@@ -25,7 +25,7 @@ chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
 adb pull /system/etc/AudioBTID.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/AudioBTID.csv
 adb pull /system/etc/firmware/bcm4329.hcd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bcm4329.hcd
 adb pull /system/etc/firmware/default.acdb ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/default.acdb
-adb pull /system/etc/firmware/default_nel.acdb ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/default_nel.acdb
+adb pull /system/etc/firmware/default_att.acdb ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/default_att.acdb
 adb pull /system/etc/firmware/default_france.acdb ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/default_france.acdb
 adb pull /system/etc/firmware/yamato_pfp.fw ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/yamato_pfp.fw
 adb pull /system/etc/firmware/yamato_pm4.fw ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/yamato_pm4.fw
@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioBTID.csv:system/etc/AudioBTID.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/default.acdb:system/etc/firmware/default.acdb \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/default_nel.acdb:system/etc/firmware/default_nel.acdb \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/default_nel.acdb:system/etc/firmware/default_att.acdb \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/default_france.acdb:system/etc/firmware/default_france.acdb \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \\
