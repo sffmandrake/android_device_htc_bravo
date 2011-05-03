@@ -41,10 +41,15 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>200</item>
-        <item>400</item>
-        <item>1000</item>
-        <item>3000</item>
+        <item>11</item>
+        <item>41</item>
+        <item>91</item>
+        <item>161</item>
+        <item>226</item>
+        <item>321</item>
+        <item>641</item>
+        <item>1281</item>
+        <item>2601</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -52,11 +57,16 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>35</item>
-        <item>55</item>
-        <item>70</item>
-        <item>70</item>
-        <item>250</item>
+        <item>90</item>
+        <item>90</item>
+        <item>160</item>
+        <item>160</item>
+        <item>160</item>
+        <item>192</item>
+        <item>192</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -66,6 +76,11 @@
     <integer-array name="config_autoBrightnessButtonBacklightValues">
         <item>255</item>
         <item>255</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -77,6 +92,11 @@
          Bravo has no keyboard so all values are zero.
     -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -141,6 +161,6 @@
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>30</item>
+        <item>40</item>
     </integer-array>
 </resources>
