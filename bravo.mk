@@ -95,8 +95,15 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # Bravo uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
+ifeq (dehydration_bravo,$(TARGET_PRODUCT))
 PRODUCT_COPY_FILES += \
-    device/htc/bravo/bravo-keypad.kl:system/usr/keylayout/bravo-keypad.kl \
+    device/htc/bravo/bravo-keypad-dehydration.kl:system/usr/keylayout/bravo-keypad.kl
+else 
+PRODUCT_COPY_FILES += \
+    device/htc/bravo/bravo-keypad.kl:system/usr/keylayout/bravo-keypad.kl
+endif
+
+PRODUCT_COPY_FILES += \
     device/htc/bravo/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/bravo/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/bravo/vold.fstab:system/etc/vold.fstab
