@@ -121,12 +121,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-ifeq (oxygen_bravo,$(TARGET_PRODUCT))
-    WITH_DEXPREOPT=false
-else
-    WITH_DEXPREOPT=true
-endif
-
 $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
 
 # stuff common to all HTC phones
