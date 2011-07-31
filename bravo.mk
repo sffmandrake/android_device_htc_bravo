@@ -25,11 +25,6 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/init.bravo.rc:root/init.bravo.rc \
     device/htc/bravo/ueventd.bravo.rc:root/ueventd.bravo.rc
 
-ifneq (devnull_bravo,$(TARGET_PRODUCT))
-PRODUCT_COPY_FILES += \
-    device/htc/bravo/init.rc:root/init.rc
-endif
-
 ifeq (dehydration_bravo,$(TARGET_PRODUCT))
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=200
